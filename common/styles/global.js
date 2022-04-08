@@ -1,7 +1,5 @@
 import * as Constants from "~/common/constants";
 
-import { css } from "@emotion/react";
-
 /* prettier-ignore */
 const GlobalStyles = () => css`
   html, body, div, span, applet, object, iframe,

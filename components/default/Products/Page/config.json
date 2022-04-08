@@ -1,0 +1,13 @@
+{
+	"components": [    
+	    {
+		    "component": "heroTextWithImage",
+		    "id": "cardWrapper",
+		    "className": "1234",
+		    "data": {
+		      "title": "This is my title"
+		    },
+		    "children": []
+		}
+	]
+}  

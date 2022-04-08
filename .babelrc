@@ -1,20 +1,31 @@
 {
-  "presets": [
-    [
-      "next/babel",
-      {
-        "transform-runtime": {
-          "useESModules": false
-        }
-      }
+    "presets": [
+        [
+            "next/babel",
+            {
+                "transform-runtime":
+                {
+                    "useESModules": false
+                }
+            }
+        ],
     ],
-    "@emotion/babel-preset-css-prop",
-  ],
-  "plugins": [
-    ["module-resolver", {
-      "alias": {
-        "~": "./"
-      }
-    }]
-  ]
+    "plugins": [
+        ["module-resolver",
+        {
+            "alias":
+            {
+                "~": "./",
+                "@template": "./components/default",
+                "@user": "./lib/middleware",
+                "@db": "./lib/db/functions",
+
+                "@template/pages": "@template/Pages",
+                "@admin": "./components/default/Admin",
+                "@admin-forms": "@template/Products/Page",
+                "@hooks": "./hooks",
+                "@middleware": "./lib/middleware"
+            }
+        }]
+    ]
 }

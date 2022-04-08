@@ -3,8 +3,10 @@ import next from "next";
 import BodyParser from "body-parser";
 import compression from "compression";
 
+//import { useUser } from '~/lib/middleware'
+
 const dev = process.env.NODE_ENV !== "production";
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 const app = next({ dev, quiet: false });
 const nextRequestHandler = app.getRequestHandler();
 
@@ -24,6 +26,10 @@ app.prepare().then(() => {
   );
 
   server.get("*", async (req, res) => {
+    return nextRequestHandler(req, res, req.url);
+  });
+
+  server.post("*", async (req, res) => {
     return nextRequestHandler(req, res, req.url);
   });
 
